@@ -1,14 +1,16 @@
 var Random = parseInt(Math.random() * 649)
 
-GerarPokemon(Random)
+setTimeout(() => {
+    GerarPokemon(Random)
 .then((pokemon) => {
-
     document.querySelector('div#img_pokemon').appendChild(pokemon.svg.tag)
+    document.querySelector('div#area-carregando').style.display = 'none'
     document.querySelector('p#nome_pokemon').innerHTML = pokemon.name
 })
 .catch((err) => {
     window.location.reload()
 })
+}, 500);
 
 function GerarPokemon(id) {
     return new Promise((resolve,reject) => {

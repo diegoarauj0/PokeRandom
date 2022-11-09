@@ -1,6 +1,20 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+@keyframes ani_carregando {
+    0%{
+        width: 50px;
+        height: 50px;
+    }
+    50%{
+        width: 25px;
+        height: 25px;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+    }
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -49,6 +63,23 @@ div#pokemon {
 
 div#img_pokemon > img {
     max-width: 250px;
+}
+
+div#area-carregando {
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.circulo-carregando {
+    animation: ani_carregando 2s infinite;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    margin: 0px 5px;
 }
 
 p#nome_pokemon {
