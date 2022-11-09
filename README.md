@@ -1,2 +1,2 @@
 # PokeRandom
- teste
+ Mostrar um pokemon aleatorio
